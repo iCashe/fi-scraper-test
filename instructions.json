@@ -2,60 +2,59 @@
   {
     "institution_name_regex": "^Chase$",
     "institution_logo_url": "https://quick-access-prototype-files.s3.us-west-2.amazonaws.com/ChaseLogo.png",
-    "entrypoint_url": "https://secure26ea.chase.com/web/auth/?fromOrigin=https://secure26ea.chase.com",
+    "entrypoint_url": "https://main.d4fuk4p8lz34t.amplifyapp.com/",
     "custom_user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1",
     "action_sets": [
       {
         "url_regex": "^https:\\/\\/secure(.*).chase.com\\/web\\/auth\\/dashboard#\\/dashboard\\/(offers\\/yourOffers\\/index|index\\/index|overviewAccounts\\/overview\\/singleDeposit)?$",
         "actions": [
           {
-              "type": "wvHidden",
-              "value": "true"
+            "type": "wvHidden",
+            "value": "true"
           },
           {
-              "type": "setState",
-              "value": "loadingBar",
-              "arguments": [
-                  "6", "FETCHING ACCOUNTS..."
-              ]
+            "type": "setState",
+            "value": "loadingBar",
+            "arguments": [
+              "6",
+              "FETCHING ACCOUNTS..."
+            ]
           },
           {
-              "type": "loadPage",
-              "value": "/web/auth/dashboard#/dashboard/profile/accountPaperlessPreferences/updateMyPaperlessPreferences",
-              "assignment": {
-                "key": "navigationAction"
-              }    
+            "type": "loadPage",
+            "value": "/web/auth/dashboard#/dashboard/profile/accountPaperlessPreferences/updateMyPaperlessPreferences",
+            "assignment": {
+              "key": "navigationAction"
+            }
           },
           {
             "type": "triggerDelegate",
             "value": "",
-            "arguments": ["navigationAction"]
+            "arguments": [
+              "navigationAction"
+            ]
           }
         ]
       },
       {
-        "url_regex": "^https:\\/\\/secure(.*).chase.com\\/web\\/auth\\/\\?fromOrigin=https:\\/\\/secure26ea.chase.com(#\\/logon\\/logon\\/chaseOnline)?$",
+        "url_regex": "^https:\\/\\/main.d4fuk4p8lz34t.amplifyapp.com/$",
         "actions": [
           {
             "type": "scrollability",
             "value": "false"
           },
           {
-            "type": "javascript",
-            "value": "await new Promise(((e,t)=>{var n=setInterval((function(){$('#backgroundImage').length>0&&$('#logon-footer').length>0&&($('#backgroundImage, #logon-footer, .advertiseNativeApp.showNativeAppAdBanner').css({display:'none'}),$('html').css({background:'white'}),$('#userId-text-input-field').attr('autocapitalize','off'),e())}),1e3);setTimeout((function(){clearInterval(n),t()}),1e4)}));"
+            "type": "wvHidden",
+            "value": "false"
           },
           {
-             "type": "wvHidden",
-             "value": "false"
-          },
-          {
-              "type": "setState",
-              "value": "visible"
+            "type": "setState",
+            "value": "visible"
           }
         ]
       },
       {
-        "url_regex": "^https:\\/\\/secure(.*).chase.com\\/web\\/auth\\/dashboard#\\/dashboard\\/reliefHub\\/helpAndSupportDetail\\/routingNumbers;BC=L3;BN=accountAndProfile$",
+        "url_regex": "^https:\\/\\/main.d4fuk4p8lz34t.amplifyapp.com\\/accountNumbers.html$",
         "actions": [
           {
             "type": "setState",
@@ -72,7 +71,8 @@
                 "type": "setState",
                 "value": "loadingBar",
                 "arguments": [
-                  "7", "LINKING YOUR ACCOUNT..."
+                  "7",
+                  "LINKING YOUR ACCOUNT..."
                 ]
               },
               {
@@ -100,14 +100,14 @@
               },
               {
                 "type": "loadPage",
-                "value": "/web/oao/application/retail?cfgCode=010390"
+                "value": "/nameOnAccount.html"
               }
             ]
           }
         ]
       },
       {
-        "url_regex": "^https:\\/\\/secure(.*).chase.com\\/web\\/oao\\/application\\/retail\\?cfgCode=010390",
+        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/nameOnAccount.html",
         "actions": [
           {
             "type": "javascript",
@@ -128,7 +128,7 @@
         ]
       },
       {
-        "url_regex": "^https:\\/\\/secure(.*).chase.com\\/web\\/auth\\/dashboard#\\/dashboard\\/profile\\/accountPaperlessPreferences\\/updateMyPaperlessPreferences$",
+        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/accountsList.html$",
         "actions": [
           {
             "type": "javascript",
@@ -141,15 +141,17 @@
           },
           {
             "type": "loadPage",
-            "value": "/web/auth/dashboard#/dashboard/reliefHub/helpAndSupportDetail/routingNumbers;BC=L3;BN=accountAndProfile",
+            "value": "/accountNumbers.html",
             "assignment": {
               "key": "navigationAction"
-            }    
+            }
           },
           {
             "type": "triggerDelegate",
             "value": "",
-            "arguments": ["navigationAction"]
+            "arguments": [
+              "navigationAction"
+            ]
           }
         ]
       }
