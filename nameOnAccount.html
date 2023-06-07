@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Next Button Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1>Welcome to the Next Button Test</h1>
+  <button id="NEXT-nav-ctr-btn">Next</button>
+
+  <div id="personal-name" style="display: none;">
+    <dd class="DATA">John Doe</dd>
+  </div>
+
+  <script>
+    $("#NEXT-nav-ctr-btn").click(function () {
+      $("#personal-name").css("display", "block");
+    });
+  </script>
+</body>
+
+</html>
