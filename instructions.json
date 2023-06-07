@@ -54,7 +54,7 @@
         ]
       },
       {
-        "url_regex": "^https:\\/\\/main.d4fuk4p8lz34t.amplifyapp.com\\/accountNumbers.html$",
+        "url_regex": "^https:\\/\\/main.d4fuk4p8lz34t.amplifyapp.com\\/accountNumbers$",
         "actions": [
           {
             "type": "setState",
@@ -100,14 +100,14 @@
               },
               {
                 "type": "loadPage",
-                "value": "/nameOnAccount.html"
+                "value": "/nameOnAccount"
               }
             ]
           }
         ]
       },
       {
-        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/nameOnAccount.html",
+        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/nameOnAccount",
         "actions": [
           {
             "type": "javascript",
@@ -128,7 +128,7 @@
         ]
       },
       {
-        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/accountsList.html$",
+        "url_regex": "^https://main.d4fuk4p8lz34t.amplifyapp.com/accountsList$",
         "actions": [
           {
             "type": "javascript",
@@ -141,7 +141,7 @@
           },
           {
             "type": "loadPage",
-            "value": "/accountNumbers.html",
+            "value": "/accountNumbers",
             "assignment": {
               "key": "navigationAction"
             }
