@@ -26,13 +26,6 @@
             "assignment": {
               "key": "navigationAction"
             }
-          },
-          {
-            "type": "triggerDelegate",
-            "value": "",
-            "arguments": [
-              "navigationAction"
-            ]
           }
         ]
       },
@@ -145,13 +138,6 @@
             "assignment": {
               "key": "navigationAction"
             }
-          },
-          {
-            "type": "triggerDelegate",
-            "value": "",
-            "arguments": [
-              "navigationAction"
-            ]
           }
         ]
       }
