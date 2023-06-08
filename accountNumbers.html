@@ -7,12 +7,26 @@
 </head>
 
 <body>
-  <mds-select-option label="selectedMask">Option 1</mds-select-option>
-  <mds-select-option label="selectedMask">Option 2</mds-select-option>
-  <mds-select-option label="selectedMask">Option 3</mds-select-option>
+  <mds-select-option label="Account 1" data-account="123456789" data-routing="98654321">Account 1</mds-select-option>
+  <mds-select-option label="Account 2" data-account="234567890" data-routing="87654321">Account 2</mds-select-option>
+  <mds-select-option label="Account 3" data-account="345678901" data-routing="76543210">Account 3</mds-select-option>
 
-  <div id="account-number-field">123456789</div>
-  <div id="routing-number-field">98654321</div>
+  <div>
+    <h2>Selected Account Details:</h2>
+    <div id="account-number-field"></div>
+    <div id="routing-number-field"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('mds-select-option').click(function () {
+        var account = $(this).attr('data-account');
+        var routing = $(this).attr('data-routing');
+        $('#account-number-field').text(account);
+        $('#routing-number-field').text(routing);
+      });
+    });
+  </script>
 </body>
 
 </html>
